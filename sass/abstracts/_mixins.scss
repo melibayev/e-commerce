@@ -1,0 +1,43 @@
+@use "./variables" as var;
+
+// FOR BUTTONS
+@mixin button($padding-y, $padding-x) {
+  display: inline-block;
+  padding: $padding-y, $padding-x;
+  background-color: $light-blue;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+// GLOBAL MEDIA
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+// FOR MOBILE MEDIA
+@mixin first-mobile($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+// FOR D-FLEX
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+// FOR D-GRID
+@mixin grid($cols, $rows, $column-gap, $row-gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+}
