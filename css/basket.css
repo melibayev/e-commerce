@@ -538,7 +538,6 @@ footer {
   padding: 96px 120px;
   max-width: 600px;
   width: 100%;
-  opacity: 1 !important;
   background-color: white;
   transform: translateY(-100vh);
   transition: 0.5s;
@@ -591,7 +590,7 @@ footer {
 }
 
 .modal-show {
-  opacity: 0.8;
+  opacity: 1;
   z-index: 2000;
 }
 
