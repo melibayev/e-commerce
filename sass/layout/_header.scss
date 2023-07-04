@@ -1,5 +1,35 @@
 @use "../abstracts/variables" as var;
 
+.toggle__list {
+    position:fixed;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 100;
+    transition: .7s;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+.toggle {
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
 
 nav {
     padding-top: 16px;
@@ -10,6 +40,7 @@ nav {
     width: 100%;
     z-index: 1000;
     background-color: #FFFFFF;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.10);
 }
 
 .navbar {
@@ -59,7 +90,7 @@ nav {
         display: flex;
         align-items: center;
         gap: 32px;
-        .product__item {
+        .product__item a{
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -109,6 +140,8 @@ nav {
     display: none;
 }
 
+
+
 @media (max-width: 1000px) {
     .navbar {
         &_left {
@@ -145,6 +178,12 @@ nav {
             }
         }
     }   
+
+    // dropdown
+    .toggle {
+        grid-template-columns: 1fr 1fr;
+        justify-content:space-between;
+    }
 }
 
 @media (max-width: 600px) {
@@ -158,6 +197,11 @@ nav {
         &_right {
             display: none;
         }
+    }
+
+    // dropdown 
+    .toggle {
+        display: none;
     }
 }
 

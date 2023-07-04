@@ -14,15 +14,15 @@
             <div class="container">
                 <div class="navbar" id="navbar">
                     <div class="navbar_left">
-                        <a href="#"><svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="index.html"><svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M35.6689 16.819H4.28623C3.62872 16.819 3.09179 17.3764 3.15209 18.0343C3.84119 25.8488 11.1112 31.9999 19.9776 31.9999C28.844 31.9999 36.1139 25.8517 36.803 18.0343C36.8605 17.3764 36.3264 16.819 35.6689 16.819Z" fill="#FF6633"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.225147 3.33137C1.7887 1.27854 4.60645 0 7.711 0C10.8155 0 13.6333 1.27854 15.1969 3.33137C15.5659 3.81589 15.4714 4.50716 14.9858 4.87537C14.5001 5.24357 13.8073 5.14928 13.4383 4.66476C12.3661 3.25707 10.2569 2.20377 7.711 2.20377C5.16509 2.20377 3.05591 3.25707 1.98374 4.66476C1.6147 5.14928 0.921857 5.24357 0.436236 4.87537C-0.0493858 4.50716 -0.143894 3.81589 0.225147 3.33137Z" fill="#414141"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7671 3.33137C26.3307 1.27854 29.1484 0 32.253 0C35.3552 0 38.1721 1.27884 39.7381 3.33045C40.1077 3.81458 40.0139 4.50596 39.5287 4.87467C39.0434 5.24338 38.3505 5.14981 37.981 4.66568C36.9055 3.25676 34.7955 2.20377 32.253 2.20377C29.7071 2.20377 27.5979 3.25707 26.5257 4.66476C26.1567 5.14928 25.4638 5.24357 24.9782 4.87537C24.4926 4.50716 24.3981 3.81589 24.7671 3.33137Z" fill="#414141"/>
                             </svg>                            
                             <p>Северяночка</p>
                             </a>
-                            <button class="desktop-btn"><i class="fa-solid fa-bars"></i><p>Каталог</p></button>
-                            <button class="mobile-btn"><i class="fa-solid fa-bars"></i></button>
+                            <button class="desktop-btn" id="toggle-button"><i class="fa-solid fa-bars"></i><p>Каталог</p></button>
+                            <button class="mobile-btn" id="toggle-btn"><i class="fa-solid fa-bars"></i></button>
                             <div class="search">
                                 <input type="text" placeholder="Найти товар">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -30,16 +30,22 @@
                     </div>
                     <div class="navbar_right">
                         <div class="product__item">
-                            <i class="fa-regular fa-heart"></i>
-                            <p>Избранное</p>
+                            <a href="">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>Избранное</p>
+                            </a>
                         </div>
                         <div class="product__item">
-                            <i class="fa-sharp fa-solid fa-box"></i>
-                            <p>продукты</p>
+                            <a href="all_products.html">
+                                <i class="fa-sharp fa-solid fa-box"></i>
+                                <p>продукты</p>
+                            </a>
                         </div>
                         <div class="product__item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p>Корзина</p>
+                            <a href="">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <p>Корзина</p>
+                            </a>
                         </div>
                         <div class="person">
                             <img src="assets/images/header-footer/avatar.svg" alt="">
@@ -50,9 +56,60 @@
                 </div>
             </div>
         </nav>
+        <div class="toggle__list" id="toggle__list">
+            <div class="container">
+                <div class="toggle">
+                    <div class="toggle__items">
+                        <a href="#">Молоко, сыр, яйцо</a>
+                        <a href="#">Хлеб</a>
+                        <a href="#">Фрукты и овощи</a>
+                        <a href="#">Замороженные продукты</a>
+                    </div>
+                    <div class="toggle__items">
+                        <a href="#">Напитки</a>
+                        <a href="#">Кондитерские изделия</a>
+                        <a href="#">Чай, кофе</a>
+                    </div>
+                    <div class="toggle__items">
+                        <a href="#">Бакалея</a>
+                        <a href="#">Здоровое питание</a>
+                        <a href="#">Зоотовары</a>
+                    </div>
+                    <div class="toggle__items">
+                        <a href="#">Непродовольственные товары</a>
+                        <a href="#">Детское питание</a>
+                        <a href="#">Мясо, птица, колбаса</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
+        <section id="modal">
+            <div class="modal">
+                <div class="modal-content">
+                    <button class="modal-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="modal-content__title">
+                        <h4>Вход</h4>
+                    </div>
+                    <div class="modal-content__form">
+                        <form action="#">
+                            <label for="">Телефон</label>
+                            <input type="text" placeholder="Phone Number">
+                            <button>Вход</button>
+                        </form>
+                    </div>
+                    <div class="modal-content__description">
+                        <button class="active">Регистрация</button>
+                        <button>Забыли пароль?</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="home">
             <div class="container">
                 <div class="home">
@@ -67,386 +124,45 @@
                 <div class="sale__title">
                     <h2>Акции</h2>
                     <div class="sale__subtitle">
-                        <a href="#">
+                        <a href="all_products.html">
                             Все продукты
                         </a>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
-                <div class="sale__cards">
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image.png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (1).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (2).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (3).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product__cards" id="sale__products">
                 </div>
             </div>
         </section>
 
         <section id="news">
             <div class="container">
-                <div class="sale__title">
+                <div class="news__title">
                     <h2>Новинки</h2>
-                    <div class="sale__subtitle">
-                        <a href="#">
+                    <div class="news__subtitle">
+                        <a href="all_products.html">
                             Все продукты
                         </a>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
-                <div class="sale__cards">
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (4).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (3).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (2).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (1).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                    <span>С картой</span>
-                                </div>
-                                <div class="price__right">
-                                    <p>50,50₽</p>
-                                    <span>Обычная</span>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product__cards" id="last__products">
                 </div>
             </div>
         </section>
 
         <section id="recent">
             <div class="container">
-                <div class="sale__title">
+                <div class="recent__title">
                     <h2>Покупали раньше</h2>
-                    <div class="sale__subtitle">
-                        <a href="#">
+                    <div class="recent__subtitle">
+                        <a href="all_products.html">
                             Все продукты
                         </a>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
-                <div class="sale__cards">
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image.png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (3).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (2).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sale__card">
-                        <div class="sale__card__img">
-                            <img src="assets/images/home/image (1).png" alt="">
-                        </div>
-                        <div class="sale__card__info">
-                            <div class="sale__card__info__price">
-                                <div class="price__left">
-                                    <p>44,50₽</p>
-                                </div>
-                            </div>
-                            <div class="sale__card__info__description">
-                                <p>Г/Ц Блинчики с мясом вес, <br> Россия</p>
-                            </div>
-                            <div class="sale__card__info__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="sale__card__info__btn">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="product__cards" id="popular__products">
             </div>
         </section>
 
@@ -485,6 +201,55 @@
                 </div>
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2138175852956!2d69.32701887579293!3d41.32596367130778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef57fe4f482e7%3A0x2e209dbe1016ac24!2sTerra%20pro!5e0!3m2!1sru!2s!4v1687230955495!5m2!1sru!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="article">
+            <div class="container">
+                <div class="article__title">
+                    <h2>Статьи</h2>
+                    <div class="article__subtitle">
+                        <a href="#">
+                            Все статьи
+                        </a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="article__cards">
+                    <div class="article__card">
+                        <div class="article__card__img">
+                            <img src="assets/images/home/statya1.png" alt="">
+                        </div>
+                        <div class="article__card__info">
+                            <span>05.03.2021</span>
+                            <h4>Режим использования масок и перчаток на территории магазинов</h4>
+                            <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                            <button>Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="article__card">
+                        <div class="article__card__img">
+                            <img src="assets/images/home/statya2.png" alt="">
+                        </div>
+                        <div class="article__card__info">
+                            <span>05.03.2021</span>
+                            <h4>Режим использования масок и перчаток на территории магазинов</h4>
+                            <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                            <button>Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="article__card">
+                        <div class="article__card__img">
+                            <img src="assets/images/home/statya3.png" alt="">
+                        </div>
+                        <div class="article__card__info">
+                            <span>05.03.2021</span>
+                            <h4>Режим использования масок и перчаток на территории магазинов</h4>
+                            <p>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                            <button>Подробнее</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -576,7 +341,7 @@
             <div class="container">
                 <div class="footer__items">
                     <div class="footer__item">
-                        <i class="fa-sharp fa-solid fa-bars"></i>
+                        <a href="categories.html"><i class="fa-sharp fa-solid fa-bars"></i></a>
                         <p>Каталог</p>
                     </div>
                     <div class="footer__item">
@@ -598,5 +363,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

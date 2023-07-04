@@ -1,2 +1,73 @@
 @use "../global.scss";
 @use "../abstracts/variables" as var;
+
+#home {
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.home__title {
+    h2 {
+        font-size: 64px;
+        font-weight: 700;
+    }
+    margin-bottom: 60px;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.catalogue__card {
+    position: relative;
+    
+    a {
+        height: 100%;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 200px;
+        }
+        p {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            color: #ffffff;
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .home {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .catalogue__card {
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 467px) {
+    .catalogue__card {
+        a {
+            p {
+                left: 1%;
+                font-size: 14px;
+            }
+        }
+    }
+}

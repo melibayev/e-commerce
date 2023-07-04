@@ -183,6 +183,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+    footer {
+        padding-bottom: 50px;
+    }
     .footer__desktop {
         display: none;
     }

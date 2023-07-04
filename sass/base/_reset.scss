@@ -121,7 +121,16 @@ body {
   }
 }
 
-// h1,h2,h3,h4,h5,h6,
-// a,p,span,i {
-//   color: var.$dark-blue;
-// }
+h1,h2,h3,h4,h5,h6,
+a,p,span,i {
+  font-family: "Rubik";
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

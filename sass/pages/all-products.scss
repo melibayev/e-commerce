@@ -1,2 +1,37 @@
 @use "../global.scss";
 @use "../abstracts/variables" as var;
+
+#home {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background-color: #FBF8EC;
+}
+
+
+.home__title {
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    margin-bottom: 50px;
+}
+
+.product__cards {
+    margin-bottom: 60px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    button {
+        font-size: 20px;
+        background-color: transparent;
+        border: none;
+    }
+    .active span{
+        color: red;
+    }
+}
