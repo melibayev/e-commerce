@@ -41,7 +41,7 @@ window.addEventListener('keydown', (e) => {
   }
 })
 modal.addEventListener('click', (e) =>{
-  if(e.target !== modalContent && e.target !== input) {
+  if(!modalContent.contains(e.target)) {
     closeModal()
     }
 } )
