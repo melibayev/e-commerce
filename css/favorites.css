@@ -858,6 +858,7 @@ footer {
   background-color: grey;
 }
 
+.dropdown:focus .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
 }
