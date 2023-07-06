@@ -11,6 +11,11 @@ let favoriteCountMObile = document.querySelector(".likedMobile")
 let favoriteJson = localStorage.getItem("favorite");
 let favorite = JSON.parse(favoriteJson) || [];
 
+
+// category
+let categoryJson = localStorage.getItem("category");
+let category = JSON.parse(categoryJson) || [];
+
 function toggleDropdown() {
     let dropdown = document.getElementById("toggle__list");
   

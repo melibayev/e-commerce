@@ -1,2 +1,8 @@
 @use "../global.scss";
 @use "../abstracts/variables" as var;
+
+#home {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-color: #FBF8EC;;
+}
