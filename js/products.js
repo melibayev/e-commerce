@@ -14,7 +14,8 @@ let pages;
 
 
 // product card start
-function getAllProduct({ image, description, discount, price, rating, name }) {
+function getAllProduct({id, image, description, discount, price, rating, name }) {
+  let product = favorite.find((pr) => pr.id === id);
     // product card
     const productCard = document.createElement("div");
     productCard.className = "product__card";
@@ -34,6 +35,13 @@ function getAllProduct({ image, description, discount, price, rating, name }) {
     likeIcon.className = "fa-solid fa-heart"
     like.appendChild(likeIcon)
     productCardImg.appendChild(like)
+    
+    if (product) {
+      like.className = "liked"
+    }
+    like.addEventListener('click', () => {
+      addToFavorite(id)
+    })
   
     if (discount) {
       const discountInfo = document.createElement("div");
@@ -99,6 +107,8 @@ function getAllProduct({ image, description, discount, price, rating, name }) {
     // card button
     const cardButton = document.createElement("div")
     cardButton.className = "product__card__info__btn";
+
+    
     const btn = document.createElement("button")
     btn.innerHTML = "В корзину"
     cardButton.appendChild(btn);
@@ -178,4 +188,20 @@ function getPage(p) {
     page = p;
   }
   getProducts();
+}
+
+
+function addToFavorite(id) {
+  let product = products.find((pr) => pr.id == id);
+  let check = favorite.find((pr) => pr.id == id);
+  if (check) {
+    increase(id);
+  } else {
+    // product.quantity = 1;
+    // favorite.push(product);
+    favorite.push({ ...product, quantity: 1 });
+  }
+  getProducts();
+  localStorage.setItem("favorite", JSON.stringify(favorite));
+  getfavoriteCount();
 }

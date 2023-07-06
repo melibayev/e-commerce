@@ -1,10 +1,15 @@
+// Modal
 let person = document.querySelector(".person")
 let mobilePerson = document.querySelector(".footer__person");
 let modal = document.querySelector(".modal")
 let modalContent = document.querySelector(".modal-content")
 let modalClose = document.querySelector(".modal-close");
 
-
+// Add to favorite
+let favoriteCount = document.querySelector(".liked");
+let favoriteCountMObile = document.querySelector(".likedMobile")
+let favoriteJson = localStorage.getItem("favorite");
+let favorite = JSON.parse(favoriteJson) || [];
 
 function toggleDropdown() {
     let dropdown = document.getElementById("toggle__list");
@@ -45,3 +50,26 @@ modal.addEventListener('click', (e) =>{
     closeModal()
     }
 } )
+
+
+// add to favorite
+function getfavoriteCount() {
+  favoriteCount.style.display = "none";
+  favoriteCountMObile.style.display = "none"
+  if (favorite.length > 0) {
+    favoriteCount.style.display = "block";
+    favoriteCountMObile.style.display = "block"
+  }
+  favoriteCount.textContent = favorite.length;
+  favoriteCountMObile.textContent = favorite.length
+}
+
+
+getfavoriteCount();
+
+function increase(id) {
+  favorite = favorite.map((pr) => {
+    pr.id === id && pr.quantity++;
+    return pr;
+  });
+}

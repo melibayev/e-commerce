@@ -21,7 +21,7 @@
                             </svg>                            
                             <p>Северяночка</p>
                             </a>
-                            <button class="desktop-btn" id="toggle-button"><i class="fa-solid fa-bars"></i><p>Каталог</p></button>
+                            <button class="desktop-btn" id="toggle-button"><i class="fa-solid fa-bars"></i><p><a href="categories.html">Каталог</a></p></button>
                             <button class="mobile-btn" id="toggle-btn"><i class="fa-solid fa-bars"></i></button>
                             <div class="search">
                                 <input type="text" placeholder="Найти товар" class="search__input">
@@ -30,7 +30,8 @@
                     </div>
                     <div class="navbar_right">
                         <div class="product__item">
-                            <a href="">
+                            <span class="liked"></span>
+                            <a href="favorites.html">
                                 <i class="fa-regular fa-heart"></i>
                                 <p>Избранное</p>
                             </a>
@@ -42,7 +43,7 @@
                             </a>
                         </div>
                         <div class="product__item">
-                            <a href="">
+                            <a href="basket.html">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Корзина</p>
                             </a>
@@ -210,20 +211,29 @@
             <div class="container">
                 <div class="footer__items">
                     <div class="footer__item">
-                        <a href="categories.html"><i class="fa-sharp fa-solid fa-bars"></i></a>
-                        <p>Каталог</p>
+                        <a href="categories.html">
+                            <i class="fa-sharp fa-solid fa-bars"></i>
+                            <p>Каталог</p>
+                        </a>
                     </div>
                     <div class="footer__item">
-                        <i class="fa-regular fa-heart"></i>
-                        <p>Избранное</p>
+                        <a href="favorites.html">
+                            <span class="likedMobile"></span>
+                            <i class="fa-regular fa-heart"></i>
+                            <p>Избранное</p>
+                        </a>
                     </div>
                     <div class="footer__item">
-                        <i class="fa-sharp fa-solid fa-box"></i>
-                        <p>Заказы</p>
+                        <a href="all_products.html">
+                            <i class="fa-sharp fa-solid fa-box"></i>
+                            <p>Заказы</p>
+                        </a>
                     </div>
                     <div class="footer__item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <p>Корзина</p>
+                        <a href="basket.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Корзина</p>
+                        </a>
                     </div>
                     <div class="footer__person">
                         <img src="assets/images/header-footer/avatar.svg" alt="">
